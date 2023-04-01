@@ -1,3 +1,4 @@
+<<<<<<< HEAD:Front/src/redux/actions.js
 import axios from "axios";
 export const ADD_FAVORITE = "ADD_FAVORITE";
 export const REMOVE_FAVORITE = "REMOVE_FAVORITE";
@@ -33,4 +34,16 @@ export const cleanDetail = () => {
 };
 
 
+=======
+export const ADD_FAVORITE = "ADD_FAVORITE"
+export const REMOVE_FAVORITE = "REMOVE_FAVORITE"
+
+export const addFavorite = (character) => {
+    return { type: ADD_FAVORITE, payload: character }
+}
+
+export const removeFavorite = (id) => {
+    return { type: REMOVE_FAVORITE, payload: id }
+}
+>>>>>>> abeed3f355627283cfd9e5dd19b3922364bd1207:src/redux/actions.js
 

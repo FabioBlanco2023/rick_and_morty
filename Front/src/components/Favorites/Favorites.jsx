@@ -1,3 +1,4 @@
+<<<<<<< HEAD:Front/src/components/Favorites/Favorites.jsx
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux"
 import Card from "../Card/Card"
@@ -13,6 +14,16 @@ const Favorites = () => {
     return (
         <>
         {favorites.map(({ id, name, species, gender, image }) => {
+=======
+import { useSelector } from "react-redux"
+import Card from "../Card/Card"
+
+const Favorites = () => {
+    const favorites = useSelector(state=>state.favorites)
+    return (
+        <>
+        {favorites.map(({id, name, species, gender, image }) => {
+>>>>>>> abeed3f355627283cfd9e5dd19b3922364bd1207:src/components/Favorites/Favorites.jsx
             return (
             <Card
             key={id}
