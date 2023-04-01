@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import style from "./Card.module.css";
 import { connect } from "react-redux"
-<<<<<<< HEAD:Front/src/components/Card/Card.jsx
 import { removeFavorite } from "../../redux/actions";
 import axios from "axios";
 import { useState, useEffect } from "react";
@@ -26,24 +25,7 @@ function Card({ id, name, species, gender, image, onClose, removeFavorite, myFav
          addFavorite({ id, name, species, gender, image, });
       }
    };
-=======
-import { addFavorite, removeFavorite } from "../../redux/actions"
-import { useEffect, useState } from "react";
 
-function Card({ id, name, species, gender, image, onClose, addFavorite, removeFavorite, myFavorites }) {
-
-   const [isFav,setIsFav] = useState(false);
-
-   const handleFavorite = () => {
-      if(isFav) {
-          setIsFav(false)
-          removeFavorite(id)
-      }else{
-         setIsFav(true)
-         addFavorite({ id, name, species, gender, image, onClose, addFavorite, removeFavorite, })
-      }
-   }
->>>>>>> abeed3f355627283cfd9e5dd19b3922364bd1207:src/components/Card/Card.jsx
    useEffect(() => {
       myFavorites.forEach((fav)=> {
          if (fav.id === id){
@@ -52,10 +34,7 @@ function Card({ id, name, species, gender, image, onClose, addFavorite, removeFa
       });
    }, [myFavorites]);
 
-<<<<<<< HEAD:Front/src/components/Card/Card.jsx
-=======
 
->>>>>>> abeed3f355627283cfd9e5dd19b3922364bd1207:src/components/Card/Card.jsx
    return (
       <div className={style.container}>
          {isFav ? (
@@ -80,7 +59,7 @@ function Card({ id, name, species, gender, image, onClose, addFavorite, removeFa
 
 const mapDispatchToProps = (dispatch) => {
    return{
-<<<<<<< HEAD:Front/src/components/Card/Card.jsx
+
       //addFavorite: (character)=>{
          //dispatch(addFavorite(character));
       //},
@@ -89,12 +68,6 @@ const mapDispatchToProps = (dispatch) => {
       },
    };
 };
-=======
-      addFavorite: (character)=>{dispatch(addFavorite(character))},
-      removeFavorite: (id)=>{dispatch(removeFavorite(id))},
-   }
-}
->>>>>>> abeed3f355627283cfd9e5dd19b3922364bd1207:src/components/Card/Card.jsx
 
 const mapStateToProps = (state) => {
    return{
@@ -103,8 +76,5 @@ const mapStateToProps = (state) => {
 
 }
 
-<<<<<<< HEAD:Front/src/components/Card/Card.jsx
+
 export default connect(mapStateToProps, mapDispatchToProps)(Card);
-=======
-export default connect(mapStateToProps, mapDispatchToProps)(Card)
->>>>>>> abeed3f355627283cfd9e5dd19b3922364bd1207:src/components/Card/Card.jsx

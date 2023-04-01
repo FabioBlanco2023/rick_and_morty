@@ -8,11 +8,9 @@ export default function SearchBar({ onSearch }) {
    };
    return (
       <div className={style.bar}>
-<<<<<<< HEAD:Front/src/components/SearchBar/SearchBar.jsx
+
       <input type="search"
-=======
-      <input type="search" 
->>>>>>> abeed3f355627283cfd9e5dd19b3922364bd1207:src/components/SearchBar/SearchBar.jsx
+
       className={style.searchInput} 
       onChange={handleChange}/>
       <button

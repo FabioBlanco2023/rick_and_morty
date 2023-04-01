@@ -1,4 +1,3 @@
-<<<<<<< HEAD:Front/src/components/Detail/Detail.jsx
  import useCharacter from "../../hooks/useCharacter";
 //import { useEffect, useState} from "react";
 //import { useParams } from "react-router-dom";
@@ -24,31 +23,6 @@ const Detail = () => {
         <div>
             {character.name ? (
              <>
-=======
-import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
-import axios from "axios";
-
-const Detail = () => {
-    const {detailId} = useParams();
-
-    const [character,setCharacter] = useState({});
-
-    useEffect(() => {
-        const URL_BASE = "https://be-a-rym.up.railway.app/api";
-        const KEY = "3e0411043446.102b6d9d5fa85ad2236f";
-
-      axios(`${URL_BASE}/character/${detailId}?key=${KEY}`).then((response) =>   
-       setCharacter(response.data)
-        );
-     }, []);
-
-    return (
-        <div>
-            {
-             character.name ?
-             (<>
->>>>>>> abeed3f355627283cfd9e5dd19b3922364bd1207:src/components/Detail/Detail.jsx
                   <h2>{character.name}</h2>
                   <p>{character.status}</p>
                   <p>{character.species}</p>
